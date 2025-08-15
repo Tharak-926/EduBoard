@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  min-width: 220px;
+  background: #3cc1ff;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.sidebar .nav-links {
+  list-style: none;
+}
+
+.sidebar .nav-links li {
+  margin: 1rem 0;
+}
+
+.sidebar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+}
+
+.sidebar .nav-links li a:hover {
+  color: #ff0000;
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow: #333;
+  transition: 0.3s;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .student-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+header .header-icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+/* Cards */
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.card:hover{
+    background: #3cc1ff;
+    font-weight: bold;
+    color: #ff0000;
+    opacity: 3;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Progress Table */
+.progress-table table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-table th, .progress-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.progress {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: #2563eb;
+}
+
+/* Deadlines */
+.deadlines ul {
+  list-style: none;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.deadlines li {
+  margin-bottom: 0.5rem;
+}
+
+.date-badge {
+  background: #1e3a8a;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin: 10px 10px 10px 10px;
+}
+
+/* Profile Card */
+.profile-card {
+  background: white;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  
+}
+
+.profile-card img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  height: 80px;
+  width: 80px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    overflow-x: auto;
+  }
+
+  .sidebar .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+}
